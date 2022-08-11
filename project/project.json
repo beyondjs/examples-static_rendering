@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "scope": "beyond-tests",
+  "name": "sr-app",
+  "title": "Static Rendering App",
+  "description": "Proyecto de pruebas sr",
+  "layout": "main-layout",
+  "template": "template/template.json",
+  "languages": {
+    "default": "en",
+    "supported": [
+      "en",
+      "es"
+    ]
+  },
+  "modules": {
+    "path": "./modules"
+  },
+  "libraries": {
+    "imports": [
+      "@beyond-js/kernel",
+      "@beyond-js/backend",
+      "@beyond-js/ssr",
+      "@beyond-js/widgets",
+      "@beyond-js/react-widgets"
+    ]
+  },
+  "deployment": {
+    "distributions": [
+      {
+        "name": "web",
+        "platform": "web",
+        "environment": "development",
+        "port": 6060,
+        "default": true,
+        "ssr": "ssr"
+      },
+      {
+        "name": "web.ssr",
+        "platform": "web.ssr",
+        "environment": "development",
+        "port": 6061
+      },
+      {
+        "name": "ssr",
+        "platform": "ssr",
+        "environment": "development",
+        "ports": {
+          "bundles": 6065,
+          "http": 6066,
+          "inspect": 6067
+        }
+      }
+    ]
+  }
+}

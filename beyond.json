@@ -1,0 +1,12 @@
+{
+  "applications": [
+    "../../beyond/packages/kernel/project.json",
+    "../../beyond/packages/widgets/widgets/project.json",
+    "../../beyond/packages/widgets/react-18/project.json",
+    "../../beyond/packages/backend/project.json",
+    "../../beyond/packages/ssr/project.json",
+    "project/project.json"
+  ],
+  "bundles": {},
+  "libraries": []
+}
