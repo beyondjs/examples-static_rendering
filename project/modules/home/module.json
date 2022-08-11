@@ -1,5 +1,5 @@
 {
-  "name": "welcome",
+  "name": "home",
   "platforms": [
     "web",
     "android",
@@ -8,13 +8,14 @@
   ],
   "widget": {
     "is": "page",
-    "route": "/welcome/${user}",
+    "route": "/${entry}",
     "element": {
-      "name": "welcome-page"
+      "name": "home-page"
     },
     "render": {
       "sr": [
-        "/welcome/box"
+        "/beyond",
+        "/sr"
       ],
       "csr": false
     },

@@ -2,14 +2,12 @@ import * as React from "react";
 
 export /*bundle*/
 function Widget(props) {
-    const user = props.attributes.get('user');
-    console.log(2, props.attributes)
-    console.log(3, user)
+    const entry = props.attributes.get('entry');
 
     return (
         <div>
-            Hello
-            <span className="name">{user}</span>
+            Dev, i'm a <span className="name">Static Rendering(SR) widget </span>
+            and I'm displaying the attribute you put in the URL: <strong>{entry}</strong>
         </div>
     );
 }

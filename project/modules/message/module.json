@@ -1,18 +1,21 @@
 {
   "name": "message",
   "widget": {
+    "element": {
+      "name": "message-wd",
+      "attrs": [
+        "entry"
+      ]
+    },
     "render": {
       "csr": false,
       "sr": [
         {
-          "user": "box"
+          "entry": "beyond"
+        },
+        {
+          "entry": "sr"
         }
-      ]
-    },
-    "element": {
-      "name": "message-w",
-      "attrs": [
-        "user"
       ]
     },
     "sass": {
