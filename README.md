@@ -7,7 +7,7 @@ módulo tiene un atributo(widget) o una uri(página), beyond genera un archivo p
 los valores configurados para el módulo.
 ------------------------
 
-## Configuracion
+## Configuración
 
 Para configurar un módulo en beyond con SR, se debe agregar un objeto "render"
 dentro de la entrada "widget" del módulo y en él, especificar el tipo de renderizado que se quiere. Para SR la
@@ -24,7 +24,7 @@ Los layouts no reciben atributos, solo basta con definir en true la entrada "sr"
 }
 ```
 
-- ### Paginas
+- ### Páginas
 
 Las páginas reciben un array de strings que representan las uri, se configura cada entrada por cada valor esperado.
 
