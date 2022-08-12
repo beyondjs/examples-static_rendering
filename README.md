@@ -2,7 +2,7 @@
 
 Repositorio con caso de uso para static rendering
 ------------------------
-Beyond genera un archivo estático por cada módulo basado en el contenido que va a renderizar, dicho de otra forma si un
+BeyondJS genera un archivo estático por cada módulo basado en el contenido que va a renderizar, dicho de otra forma si un
 módulo tiene un atributo(widget) o una uri(página), beyond genera un archivo por cada posible renderizado que generen
 los valores configurados para el módulo.
 ------------------------
@@ -26,7 +26,7 @@ Los layouts no reciben atributos, solo basta con definir en true la entrada "sr"
 
 - ### Páginas
 
-Las páginas reciben un array de strings que representan las uri, se configura cada entrada por cada valor esperado.
+Las páginas reciben un arreglo con las posibles urls 
 
 ```json
 "render": {
