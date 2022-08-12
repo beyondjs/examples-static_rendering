@@ -2,20 +2,20 @@
 
 Repositorio con caso de uso para static rendering
 ------------------------
-Beyond genera un archivo estatico por cada modulo en base al contenido que va a renderizar, dicho de otra forma si un
-modulo tiene un atributo(widget) o una uri(pagina), beyond genera un archivo por cada posible renderizado que generen
-los valores configurados para el modulo
+Beyond genera un archivo estático por cada módulo basado en el contenido que va a renderizar, dicho de otra forma si un
+módulo tiene un atributo(widget) o una uri(página), beyond genera un archivo por cada posible renderizado que generen
+los valores configurados para el módulo.
 ------------------------
 
 ## Configuracion
 
-Para configurar un modulo en beyond con SR, se debe agregar un objeto "render"
-dentro de la entrada "widget" del modulo y en él, especificar el tipo de renderizado que se quiere. Para SR la
-configuracion varia segun el tipo de widget
+Para configurar un módulo en beyond con SR, se debe agregar un objeto "render"
+dentro de la entrada "widget" del módulo y en él, especificar el tipo de renderizado que se quiere. Para SR la
+configuración varía según el tipo de widget.
 
 - ### Layouts
 
-Los layouts no reciben atributos, solo basta con definir en true la entrada "sr" dentro de la propiedad render
+Los layouts no reciben atributos, solo basta con definir en true la entrada "sr" dentro de la propiedad render.
 
 ```json
 "render": {
@@ -26,7 +26,7 @@ Los layouts no reciben atributos, solo basta con definir en true la entrada "sr"
 
 - ### Paginas
 
-Las paginas reciben un array de strings que representan las uri, se configura cada entrada por cada valor esperado
+Las páginas reciben un array de strings que representan las uri, se configura cada entrada por cada valor esperado.
 
 ```json
 "render": {
@@ -58,7 +58,7 @@ propiedad "attrs" que es un array de string con los nombres de los atributos.
 }
 ```
 
-Para la configuracion SR los widgets reciben un array de objetos que representan los atributos que puede recibir el
+Para la configuración SR los widgets reciben un array de objetos que representan los atributos que puede recibir el
 widget para cada renderizado.
 
 ```json
@@ -74,7 +74,7 @@ widget para cada renderizado.
 
 ## Ejemplos
 
-Un caso sencillo de configuracion seria este
+Un caso sencillo de configuración sería este:
 
 ```json
 "widget": {
@@ -113,15 +113,15 @@ Implementaciones NO soportadas para este widget con SR:
 <my-widget name:"Mike" color:"red">
 ```
 
-Estos ultimos dos ejemplos no estan soportados, ya que las entradas no fueron definidas dentro del "sr"
-en la configuracion del render del modulo
+Estos últimos dos ejemplos no están soportados, ya que las entradas no fueron definidas dentro del "sr"
+en la configuración del render del módulo.
 
 ---------------------
 
 ## API
 
 En entorno de desarrollo Beyond provee una API para visualizar los archivos generados por el SR de esta manera se tiene
-informacion de todas la configuraciones realizadas y de las intancias generadas para el SR
+información de las configuraciones realizadas y de las instancias generadas para el SR.
 
 Para visualizar la api navegas a la url de tu proyecto con el enlace `__sr_widgets__/list`
 
