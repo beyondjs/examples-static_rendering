@@ -6,7 +6,7 @@
       "name": "main-layout"
     },
     "render": {
-      "sr": [],
+      "sr": true,
       "csr": false
     },
     "sass": {
