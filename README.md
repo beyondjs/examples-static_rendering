@@ -1,7 +1,6 @@
-# examples-static_rendering
+# BeyondJS examples: Static Rendering (SR)
 
-Repository with use case for static rendering, includes layout, page and widget
-
+Repositorio con caso de uso para static rendering
 ------------------------
 Beyond genera un archivo estatico por cada modulo en base al contenido que va a renderizar, dicho de otra forma si un
 modulo tiene un atributo(widget) o una uri(pagina), beyond genera un archivo por cada posible renderizado que generen
@@ -19,9 +18,9 @@ configuracion varia segun el tipo de widget
 Los layouts no reciben atributos, solo basta con definir en true la entrada "sr" dentro de la propiedad render
 
 ```json
-    "render": {
-"sr": true,
-"csr": false
+"render": {
+  "sr": true,
+  "csr": false
 }
 ```
 
@@ -30,13 +29,13 @@ Los layouts no reciben atributos, solo basta con definir en true la entrada "sr"
 Las paginas reciben un array de strings que representan las uri, se configura cada entrada por cada valor esperado
 
 ```json
-    "render": {
-"sr": [
-"/{uri1}",
-...
-"/{uriN}",
-],
-"csr": false
+"render": {
+  "csr": false,  
+  "sr": [
+    "/{uri1}",
+    ...
+    "/{uriN}",
+  ]
 }
 ```
 
@@ -46,14 +45,14 @@ Los widgets soportan atributos, estos deben estar configurados dentro de la prop
 propiedad "attrs" que es un array de string con los nombres de los atributos.
 
 ```json
-  "widget": {
-"element": {
-"name": "my-widget",
-"attrs": [
-"atribute1",
-...
-"atributeN"
-]
+"widget": {
+  "element": {
+    "name": "my-widget",
+    "attrs": [
+      "atribute1",
+      ...
+      "atributeN"
+    ]
 }
 ...
 }
@@ -63,13 +62,13 @@ Para la configuracion SR los widgets reciben un array de objetos que representan
 widget para cada renderizado.
 
 ```json
-    "render": {
-"csr": false,
-"sr": [
-{"entry1": "value"},
-...
-{"entryN": "valueN"}
-]
+"render": {
+  "csr": false,
+  "sr": [
+    {"entry1": "value"},
+    ...
+    {"entryN": "valueN"}
+  ]
 }
 ```
 
@@ -78,21 +77,21 @@ widget para cada renderizado.
 Un caso sencillo de configuracion seria este
 
 ```json
-  "widget": {
-"element": {
-"name": "my-widget",
-"attrs": [
-"name",
-"color"
-]
-}
-"render": {
-"csr": false,
-"sr": [
-{"name": "Peter", "color": "blue"},
-{"name": "Bob", "color": "green"}
-]
-}
+"widget": {
+  "element": {
+    "name": "my-widget",
+    "attrs": [
+      "name",
+      "color"
+    ]
+  },
+  "render": {
+    "csr": false,
+    "sr": [
+      {"name": "Peter", "color": "blue"},
+      {"name": "Bob", "color": "green"}
+    ]
+  }
 }
 ```
 
@@ -100,16 +99,18 @@ Implementaciones soportadas para este widget con SR:
 
 ```js
 <my-widget name:"Peter" color:"blue">
-
-    <my-widget name:"Bob" color:"green">
+```
+```js    
+<my-widget name:"Bob" color:"green">
 ```
 
 Implementaciones NO soportadas para este widget con SR:
 
 ```js
 <my-widget name:"Peter" color:"green">
-
-    <my-widget name:"Mike" color:"red">
+```
+```js
+<my-widget name:"Mike" color:"red">
 ```
 
 Estos ultimos dos ejemplos no estan soportados, ya que las entradas no fueron definidas dentro del "sr"
