@@ -15,7 +15,8 @@
     "render": {
       "sr": [
         "/beyond",
-        "/sr"
+        "/render",
+        "/"
       ],
       "csr": false
     },

@@ -6,7 +6,7 @@ function Widget(props) {
 
     return (
         <div>
-            Dev, i'm a <span className="name">Static Rendering(SR) widget </span>
+            I'm a <span className="name">Static Rendering(SR) Widget </span>
             and I'm displaying the attribute you put in the URL: <strong>{entry}</strong>
         </div>
     );

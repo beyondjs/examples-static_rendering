@@ -4,11 +4,12 @@
   "description": "",
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@types/react": "^18.0.12",
-    "@types/react-dom": "^18.0.5",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+  "dependencies": {
+    "@beyond-js/kernel": "^0.1.0",
+    "@beyond-js/backend": "^0.1.0",
+    "@beyond-js/ssr": "^0.1.0",
+    "@beyond-js/widgets": "^0.1.0",
+    "@beyond-js/react-widgets": "^18.20.1",
     "socket.io": "^4.3.1",
     "socket.io-client": "^4.4.1",
     "cheerio": "^1.0.0-rc.12"

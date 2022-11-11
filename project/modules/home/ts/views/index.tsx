@@ -9,7 +9,12 @@ export function Page(props) {
                 Welcome to <span className="name">BeyondJs test</span>.
                 Im a page with static rendering.
             </h2>
-            <message-wd entry={entry}/>
+            {entry ?
+                <message-wd entry={entry}/>
+                :
+                <div>
+                    To display a widget you must add a parameter in the url: beyond or render
+                </div>}
         </div>
     );
 }
